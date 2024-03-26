@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.prix{
+    margin-left: 60px;
+}
+.button{
+    margin: 10px;
+}
+button{
+    border: none;
+    margin: 10px;
+    padding: 10px;
+}
+.panier{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    float: left;
+    margin: 10px;
+    position:fixed;
+}
+.articles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);   
+    margin: 30px;    
+}
+img{
+    width: 50%;
+    height: 50%;
+}
