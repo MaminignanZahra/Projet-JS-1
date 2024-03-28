@@ -1,19 +1,9 @@
+
+
+
 // le coeur ; le client aime le produit ou non
 var like = document.querySelectorAll('#like');
 var originalTextColor = window.getComputedStyle(like[0]).color;
-
-
-window.addEventListener("scroll", ()=>{
-    // if(window.innerHeight){
-    //     console.log("ok");
-    // }
-
-    if(window.innerHeight>400){
-
-        console.log("bienv");
-    }
-})
-
 like.forEach(function(btn){
     btn.addEventListener('click',changeTextColor)
 })
@@ -38,26 +28,26 @@ commander.addEventListener('click',commande)
 
 
 // bouton + ; bouton -;panier
-var plus=document.querySelectorAll('.plus');
-var moins=document.querySelectorAll('.moins');
-var prix=document.querySelectorAll('.prix');
-var resume=document.querySelectorAll('.resume');
+var plus=document.querySelector('.plus');
+var moins=document.querySelector('.moins');
+var prix=document.querySelector('.prix');
+var resume=document.querySelector('.resume');
+var supprimer=document.querySelector('.supprimer')
 var panierTotal = 0; 
 
+// fonction associée au bouton+
 function panier1(){
     let total=parseFloat(prix.textContent);
     panierTotal += total;
     resume.textContent=panierTotal+" $"
    
 }
-plus.forEach(function(somme){
-somme.addEventListener()
 
-}
-)
 if(plus){
     plus.addEventListener('click',panier1)
 }
+
+// fonction associée au bouton -
 function panier2(){
     let total=parseFloat(prix.textContent);
     panierTotal -= total;
@@ -68,10 +58,8 @@ function panier2(){
 if(moins){
     moins.addEventListener('click',panier2)
 }
-var supprimer=document.querySelectorAll('.supprimer')
+// fonction associée au bouton supprimer
 function supprime(){
         resume.textContent=panierTotal-panierTotal +" $"
 }
 supprimer.addEventListener('click',supprime);
-
-
